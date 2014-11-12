@@ -1,0 +1,895 @@
+#! <?xml version="1.0" encoding="windows-1252" ?>
+#! <WORKSPACE
+#    
+#    
+#    Command-line to run this workspace:
+#    
+#    
+#    "C:\Program Files (x86)\FME\FME2014_32\fme.exe" H:\gimb14\c\c130606\data\FME\DGO3\DGO3_1.fmw
+#          --fichier_source_excel H:\gimb14\c\c130606\data\templates\Fiche_encodage_complete_master.xlsm
+#          --Dossier_traitement C:\Users\elise\Desktop\traitement
+#          --SourceDataset_MDB_ADO H:\gimb14\c\c130606\data\DGO3\Extrait_TB_1.mdb
+#    
+#    
+#! PASSWORD=""
+#! ATTR_TYPE_ENCODING="SDF"
+#! VIEW_POSITION="75 615"
+#! SHOW_INFO_NODES="true"
+#! FME_STROKE_MAX_DEVIATION="0"
+#! BEGIN_PYTHON=""
+#! FME_GEOMETRY_HANDLING="Enhanced"
+#! DESCRIPTION=""
+#! TITLE=""
+#! MAX_LOG_FEATURES="200"
+#! END_TCL=""
+#! FME_BUILD_NUM="14290"
+#! ZOOM_SCALE="100"
+#! CATEGORY=""
+#! REDIRECT_TERMINATORS="NONE"
+#! LEGAL_TERMS_CONDITIONS=""
+#! FME_REPROJECTION_ENGINE="FME"
+#! USAGE=""
+#! END_PYTHON=""
+#! HISTORY=""
+#! FME_DOCUMENT_PRIORGUID="8de59479-e05d-4e77-ae5b-5a32108140a4,24606900-a6bb-4fb5-abcb-a677fbf444fc,47efe2f8-dffc-4e6a-92a9-b1d79cd57557,4252ce45-7d67-4ba1-a603-dcc9e2d9df4a,99c366eb-2b6d-4438-b618-823d81c92fa8,9f9e7f93-77b4-419c-8943-2bc846c40139"
+#! DOC_TOP_LEFT="116 -45"
+#! REQUIREMENTS_KEYWORD=""
+#! SOURCE_ROUTING_FILE=""
+#! DESTINATION_ROUTING_FILE=""
+#! DESTINATION="NONE"
+#! LAST_SAVE_DATE="2014-11-02T20:45:51"
+#! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#! WORKSPACE_VERSION="1"
+#! SOURCE="NONE"
+#! LAST_SAVE_BUILD="FME(R) 2014 SP1 (20140325 - Build 14290 - WIN32)"
+#! FME_SERVER_SERVICES=""
+#! LOG_MAX_RECORDED_FEATURES="200"
+#! LOG_FILE=""
+#! REQUIREMENTS=""
+#! BEGIN_TCL=""
+#! DOC_EXTENTS="3403 376"
+#! FME_DOCUMENT_GUID="1ef19398-5553-4bd6-871a-48f32878b03b"
+#! SHOW_ANNOTATIONS="true"
+#! IGNORE_READER_FAILURE="No"
+#! WARN_INVALID_XFORM_PARAM="Yes"
+#! >
+#! <DATASETS>
+#! <DATASET
+#! IS_SOURCE="true"
+#! ROLE="READER"
+#! FORMAT="MDB_ADO"
+#! DATASET="$(SourceDataset_MDB_ADO)"
+#! KEYWORD="MDB_ADO_1"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="mdb_sql_statement &quot;&quot; mdb_where_clause &quot;&quot;"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_text_size double fme_rotation double fme_feature_type text(50) multi_reader_keyword text(50) multi_reader_id long fme_dataset text(50) db_type text(254) multi_reader_full_id long fme_geometry fme_char(50) multi_reader_type text(50) fme_fill_color text(50) fme_basename text(50) fme_text_string text(50) fme_secondary_axis double fme_primary_axis double fme_sweep_angle double fme_start_angle double fme_type text(50) fme_color text(50)"
+#! DEFLINE_PARMS="&quot;GUI OPTIONAL TEXT mdb_where_clause  WHERE Clause&quot; &quot;&quot; &quot;GUI OPTIONAL TEXT mdb_sql_statement     SELECT Statement&quot; &quot;&quot; "
+#! ATTR_INDEX_TYPES="indexed unique"
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! GENERATE_FME_BUILD_NUM="14290"
+#! MAX_FEATURES=""
+#! COORDSYS=""
+#! MIN_FEATURES=""
+#! FEATURE_TYPES=""
+#! START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="MIME_TYPE"
+#! VALUE="application/x-msaccess ADD_DISPOSITION"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="yesno"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="MDB_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="memo"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="MDB_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="hyperlink"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="MDB_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="replicationid"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="MDB_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="oleobject"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="MDB_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="integer"
+#! FME_TYPE="fme_int16"
+#! FORMAT="MDB_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="integer"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="MDB_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="byte"
+#! FME_TYPE="fme_int16"
+#! FORMAT="MDB_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="long"
+#! FME_TYPE="fme_int32"
+#! FORMAT="MDB_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="long"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="MDB_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="autonumber"
+#! FME_TYPE="fme_int32"
+#! FORMAT="MDB_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="datetime"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="MDB_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="datetime"
+#! FME_TYPE="fme_date"
+#! FORMAT="MDB_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="datetime"
+#! FME_TYPE="fme_time"
+#! FORMAT="MDB_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="decimal(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="MDB_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="single"
+#! FME_TYPE="fme_real32"
+#! FORMAT="MDB_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="double"
+#! FME_TYPE="fme_real64"
+#! FORMAT="MDB_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="decimal(10,0)"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="MDB_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="decimal(19,0)"
+#! FME_TYPE="fme_int64"
+#! FORMAT="MDB_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="decimal(20,0)"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="MDB_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="currency"
+#! FME_TYPE="fme_real64"
+#! FORMAT="MDB_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="MDB_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="MDB_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text(1)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="MDB_ADO"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="MDB_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_point"
+#! FORMAT="MDB_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_line"
+#! FORMAT="MDB_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_area"
+#! FORMAT="MDB_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_text"
+#! FORMAT="MDB_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="MDB_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_arc"
+#! FORMAT="MDB_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="MDB_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="MDB_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_collection"
+#! FORMAT="MDB_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_raster"
+#! FORMAT="MDB_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_surface"
+#! FORMAT="MDB_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_solid"
+#! FORMAT="MDB_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="MDB_ADO"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="DATA"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="4"
+#! FEAT_GEOMTYPE="db_none"
+#! POSITION="116 177"
+#! ORDER="5e+014"
+#! COLLAPSED="true"
+#! KEYWORD="MDB_ADO_1"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="ID_Data" ATTR_TYPE="autonumber" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="abreg_data" ATTR_TYPE="text(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="nom_data" ATTR_TYPE="text(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="theme" ATTR_TYPE="long" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="memo" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Imagette" ATTR_TYPE="text(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="categ_avancement" ATTR_TYPE="text(150)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Metadata_YN" ATTR_TYPE="yesno" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="pers_encodage_gene" ATTR_TYPE="text(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="date_encodage_gene" ATTR_TYPE="datetime" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="org_auteur" ATTR_TYPE="long" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="org_proprio" ATTR_TYPE="long" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="pers_data" ATTR_TYPE="long" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="pers_matière" ATTR_TYPE="long" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="localisation" ATTR_TYPE="text(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="pers_encodage_DGRNE" ATTR_TYPE="text(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="date_encodage_DGRNE" ATTR_TYPE="datetime" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="date_version_DGRNE" ATTR_TYPE="text(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="sauvegarde_DGRNE" ATTR_TYPE="text(100)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="remarque_DGRNE" ATTR_TYPE="memo" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="info_version_DGRNE" ATTR_TYPE="memo" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="proc_màj_DGRNE" ATTR_TYPE="memo" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="DGRNE_internet" ATTR_TYPE="text(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="DGRNE_obtention" ATTR_TYPE="memo" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="DGRNE_dico" ATTR_TYPE="yesno" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="DGRNE_OGEAD" ATTR_TYPE="yesno" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="DGRNE_OGEAD_intra" ATTR_TYPE="yesno" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="DGRNE_OGEAD_REMARQUE" ATTR_TYPE="memo" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="DGRNE_path_lyr" ATTR_TYPE="text(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="pers_encodage_DGATLP" ATTR_TYPE="text(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="date_encodage_DGATLP" ATTR_TYPE="datetime" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="date_version_DGATLP" ATTR_TYPE="text(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="sauvegarde_DGATLP" ATTR_TYPE="text(100)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="remarque_DGATLP" ATTR_TYPE="memo" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="info_version_DGATLP" ATTR_TYPE="memo" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="proc_màj_DGATLP" ATTR_TYPE="memo" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="DGATLP_internet" ATTR_TYPE="text(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="DGATLP_obtention" ATTR_TYPE="memo" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="DGATLP_description" ATTR_TYPE="memo" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="DGATLP_path_lyr" ATTR_TYPE="text(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="DGATLP_copyright" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="mdb_where_clause" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="mdb_sql_statement" PARM_VALUE=""/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI OPTIONAL FILENAME_OR_ATTR fichier_source_excel   Fichier Template fichier excel:"
+#! DEFAULT_VALUE="H:\gimb14\c\c130606\data\templates\Fiche_encodage_complete_master.xlsm"
+#! IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI OPTIONAL DIRNAME_OR_ATTR Dossier_traitement Dossier_enregistrement_fichier_output:"
+#! DEFAULT_VALUE="C:\Users\elise\Desktop\traitement"
+#! IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI MULTIFILE SourceDataset_MDB_ADO Access_Database_Files(*.mdb;*.accdb)|*.mdb;*.accdb|All_files(*.*)|*.* MDB:"
+#! DEFAULT_VALUE="H:\gimb14\c\c130606\data\DGO3\Extrait_TB_1.mdb"
+#! IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#! IDENTIFIER="5"
+#! TYPE="WorkspaceRunner"
+#! VERSION="1"
+#! POSITION="2754 167"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="SUCCEEDED"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="abreg_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="nom_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="theme" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Description" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="pers_matière" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Dossier_traitement" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Nom_fichier" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Nom_fichier_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="nom_fichier_data_xlsx" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fichier_vbs" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="FAILED"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="abreg_data" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="nom_data" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="theme" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Description" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="pers_matière" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Dossier_traitement" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Nom_fichier" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Nom_fichier_data" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="nom_fichier_data_xlsx" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="fichier_vbs" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_failure_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <OUTPUT_FEAT NAME="SUMMARY"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="_proc_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="_processes{}" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_PARM PARM_NAME="WORKSPACE_FILE" PARM_VALUE="DGO3_2.fmw"/>
+#! <XFORM_PARM PARM_NAME="PARAMETER_TYPES" PARM_VALUE="DIRNAME,FILENAME_MUSTEXIST,MULTIFILE,TEXT,TEXT,TEXT,TEXT,TEXT"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="WorkspaceRunner"/>
+#! <XFORM_PARM PARM_NAME="BLOCKING" PARM_VALUE="Yes"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="WORKSPACE_PARAMETERS" PARM_VALUE="Dossier_traitement,$(Dossier_traitement),Fichier_source,$(fichier_source_excel),SourceDataset_MDB_ADO,$(SourceDataset_MDB_ADO),abreg_data,&lt;at&gt;Value&lt;openparen&gt;abreg_data&lt;closeparen&gt;,Description,&lt;at&gt;Value&lt;openparen&gt;Description&lt;closeparen&gt;,nom_data,&lt;at&gt;Value&lt;openparen&gt;nom_data&lt;closeparen&gt;,pers_matière,&lt;at&gt;Value&lt;openparen&gt;pers_mati&lt;u00e8&gt;re&lt;closeparen&gt;,theme,&lt;at&gt;Value&lt;openparen&gt;theme&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="MAX_PROC" PARM_VALUE="&lt;Unused&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="6"
+#! TYPE="AttributeKeeper"
+#! VERSION="2"
+#! POSITION="653 162"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="abreg_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="nom_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="theme" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Description" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="pers_matière" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeKeeper"/>
+#! <XFORM_PARM PARM_NAME="KEEP_LIST" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="KEEP_ATTRS" PARM_VALUE="abreg_data,nom_data,theme,Description,pers_matière"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="9"
+#! TYPE="AttributeCreator"
+#! VERSION="5"
+#! POSITION="2226 72"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="abreg_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="nom_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="theme" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Description" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="pers_matière" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Dossier_traitement" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Nom_fichier" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Nom_fichier_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="nom_fichier_data_xlsx" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fichier_vbs" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator_3"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="fichier_vbs,Dim&lt;space&gt;objExcel&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;Dim&lt;space&gt;objWB1&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;Dim&lt;space&gt;objWB2&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;Dim&lt;space&gt;ws&lt;space&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;Set&lt;space&gt;objExcel&lt;space&gt;=&lt;space&gt;CreateObject&lt;openparen&gt;&lt;quote&gt;Excel.Application&lt;quote&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;objExcel.DisplayAlerts&lt;space&gt;=&lt;space&gt;False&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;Set&lt;space&gt;objWB1&lt;space&gt;=&lt;space&gt;objExcel.Workbooks.Open&lt;openparen&gt;&lt;quote&gt;&lt;at&gt;Value&lt;openparen&gt;Dossier_traitement&lt;closeparen&gt;&lt;backslash&gt;&lt;at&gt;Value&lt;openparen&gt;Nom_fichier_data&lt;closeparen&gt;.xlsx&lt;quote&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;tab&gt;Set&lt;space&gt;objWB2&lt;space&gt;=&lt;space&gt;objExcel.Workbooks.Open&lt;openparen&gt;&lt;quote&gt;&lt;at&gt;Value&lt;openparen&gt;Dossier_traitement&lt;closeparen&gt;&lt;backslash&gt;&lt;at&gt;Value&lt;openparen&gt;Nom_fichier&lt;closeparen&gt;&lt;quote&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;tab&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;For&lt;space&gt;Each&lt;space&gt;ws&lt;space&gt;In&lt;space&gt;objWB1.Sheets&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;ws.Copy&lt;space&gt;objWB2.Sheets&lt;openparen&gt;objWB2.Sheets.Count&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;Next&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;objWB1.Close&lt;space&gt;False&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;objWB2.Save&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;objWB2.Close&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;With&lt;space&gt;objExcel&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;.DisplayAlerts&lt;space&gt;=&lt;space&gt;True&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;.Quit&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;End&lt;space&gt;With&lt;lf&gt;&lt;space&gt;&lt;lf&gt;&lt;apos&gt;&lt;space&gt;Open&lt;space&gt;the&lt;space&gt;workbook&lt;lf&gt;&lt;tab&gt;Set&lt;space&gt;objWorkbook&lt;space&gt;=&lt;space&gt;objExcel.Workbooks.Open&lt;space&gt;&lt;openparen&gt;&lt;quote&gt;&lt;at&gt;Value&lt;openparen&gt;Dossier_traitement&lt;closeparen&gt;&lt;backslash&gt;&lt;at&gt;Value&lt;openparen&gt;Nom_fichier&lt;closeparen&gt;&lt;quote&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;lf&gt;&lt;tab&gt;objExcel.Visible&lt;space&gt;=&lt;space&gt;False&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;Set&lt;space&gt;c=objWorkbook.Worksheets&lt;openparen&gt;&lt;quote&gt;data_move&lt;quote&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;lf&gt;&lt;tab&gt;c.Range&lt;openparen&gt;&lt;quote&gt;E2&lt;quote&gt;&lt;closeparen&gt;.Copy&lt;lf&gt;&lt;tab&gt;objWorkbook.Worksheets&lt;openparen&gt;&lt;quote&gt;Contacts&lt;quote&gt;&lt;closeparen&gt;.Range&lt;openparen&gt;&lt;quote&gt;H6&lt;quote&gt;&lt;closeparen&gt;.PasteSpecial&lt;space&gt;-4163&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;c.Range&lt;openparen&gt;&lt;quote&gt;G2&lt;quote&gt;&lt;closeparen&gt;.Copy&lt;lf&gt;&lt;tab&gt;objWorkbook.Worksheets&lt;openparen&gt;&lt;quote&gt;Contacts&lt;quote&gt;&lt;closeparen&gt;.Range&lt;openparen&gt;&lt;quote&gt;H5&lt;quote&gt;&lt;closeparen&gt;.PasteSpecial&lt;space&gt;-4163&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;c.Range&lt;openparen&gt;&lt;quote&gt;F2&lt;quote&gt;&lt;closeparen&gt;.Copy&lt;lf&gt;&lt;tab&gt;objWorkbook.Worksheets&lt;openparen&gt;&lt;quote&gt;Contacts&lt;quote&gt;&lt;closeparen&gt;.Range&lt;openparen&gt;&lt;quote&gt;H8&lt;quote&gt;&lt;closeparen&gt;.PasteSpecial&lt;space&gt;-4163&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;c.Range&lt;openparen&gt;&lt;quote&gt;D2&lt;quote&gt;&lt;closeparen&gt;.Copy&lt;lf&gt;&lt;tab&gt;objWorkbook.Worksheets&lt;openparen&gt;&lt;quote&gt;Description&lt;quote&gt;&lt;closeparen&gt;.Range&lt;openparen&gt;&lt;quote&gt;G5&lt;quote&gt;&lt;closeparen&gt;.PasteSpecial&lt;space&gt;-4163&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;c.Range&lt;openparen&gt;&lt;quote&gt;C2&lt;quote&gt;&lt;closeparen&gt;.Copy&lt;lf&gt;&lt;tab&gt;objWorkbook.Worksheets&lt;openparen&gt;&lt;quote&gt;Description&lt;quote&gt;&lt;closeparen&gt;.Range&lt;openparen&gt;&lt;quote&gt;G15&lt;quote&gt;&lt;closeparen&gt;.PasteSpecial&lt;space&gt;-4163&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;c.Range&lt;openparen&gt;&lt;quote&gt;A2&lt;quote&gt;&lt;closeparen&gt;.Copy&lt;lf&gt;&lt;tab&gt;objWorkbook.Worksheets&lt;openparen&gt;&lt;quote&gt;Identification&lt;quote&gt;&lt;closeparen&gt;.Range&lt;openparen&gt;&lt;quote&gt;F3&lt;quote&gt;&lt;closeparen&gt;.PasteSpecial&lt;space&gt;-4163&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;c.Range&lt;openparen&gt;&lt;quote&gt;B2&lt;quote&gt;&lt;closeparen&gt;.Copy&lt;lf&gt;&lt;tab&gt;objWorkbook.Worksheets&lt;openparen&gt;&lt;quote&gt;Identification&lt;quote&gt;&lt;closeparen&gt;.Range&lt;openparen&gt;&lt;quote&gt;F5&lt;quote&gt;&lt;closeparen&gt;.PasteSpecial&lt;space&gt;-4163&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;lf&gt;&lt;tab&gt;objWorkbook.Save&lt;lf&gt;&lt;lf&gt;&lt;tab&gt;objWorkbook.sheets&lt;openparen&gt;&lt;quote&gt;data_move&lt;quote&gt;&lt;closeparen&gt;.Delete&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;objWorkbook.sheets&lt;openparen&gt;&lt;quote&gt;Accueil-Instructions&lt;quote&gt;&lt;closeparen&gt;.Select&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;lf&gt;objWorkbook.Save&lt;lf&gt;objExcel.Quit&lt;lf&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="11"
+#! TYPE="PythonCaller"
+#! VERSION="4"
+#! POSITION="3509 331"
+#! ORDER="6"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="abreg_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="nom_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="theme" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Description" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="pers_matière" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Dossier_traitement" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Nom_fichier" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Nom_fichier_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="nom_fichier_data_xlsx" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fichier_vbs" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="LIST_ATTRS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="HIDE_ATTRIBUTES" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PYTHONSOURCE" PARM_VALUE="import&lt;space&gt;fmeobjects&lt;lf&gt;import&lt;space&gt;os&lt;lf&gt;&lt;lf&gt;&lt;lf&gt;#&lt;space&gt;Template&lt;space&gt;Function&lt;space&gt;interface:&lt;lf&gt;def&lt;space&gt;traitement&lt;openparen&gt;feature&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;fichier_vbs=feature.getAttribute&lt;openparen&gt;&lt;quote&gt;fichier_vbs&lt;quote&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;Nom=feature.getAttribute&lt;openparen&gt;&lt;quote&gt;nom_fichier_data_xlsx&lt;quote&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;Dossier_traitement=FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;Dossier_traitement&lt;apos&gt;&lt;closebracket&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;file&lt;space&gt;=&lt;space&gt;open&lt;openparen&gt;&lt;quote&gt;fichier.vbs&lt;quote&gt;&lt;comma&gt;&lt;space&gt;&lt;quote&gt;w&lt;quote&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;file.write&lt;openparen&gt;fichier_vbs&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;file.close&lt;openparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;os.system&lt;openparen&gt;&lt;quote&gt;fichier.vbs&lt;quote&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;os.remove&lt;openparen&gt;&lt;quote&gt;fichier.vbs&lt;quote&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;os.remove&lt;openparen&gt;Nom&lt;closeparen&gt;&lt;lf&gt;&lt;lf&gt;&lt;lf&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PythonCaller"/>
+#! <XFORM_PARM PARM_NAME="PYTHONSYMBOL" PARM_VALUE="traitement"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ADVANCED_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="NEW_ATTRIBUTES" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="12"
+#! TYPE="AttributeCreator"
+#! VERSION="3"
+#! POSITION="1693 158"
+#! ORDER="8"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="abreg_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="nom_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="theme" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Description" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="pers_matière" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Dossier_traitement" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Nom_fichier" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Nom_fichier_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="nom_fichier_data_xlsx" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator_2"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="Nom_fichier,&lt;at&gt;Value&lt;openparen&gt;abreg_data&lt;closeparen&gt;.xlsm,Nom_fichier_data,&lt;at&gt;Value&lt;openparen&gt;abreg_data&lt;closeparen&gt;_data,nom_fichier_data_xlsx,$(Dossier_traitement)&lt;backslash&gt;&lt;at&gt;Value&lt;openparen&gt;abreg_data&lt;closeparen&gt;_data.xlsx"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="15"
+#! TYPE="ParameterFetcher"
+#! VERSION="4"
+#! POSITION="1177 153"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="abreg_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="nom_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="theme" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Description" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="pers_matière" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Dossier_traitement" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="ParameterFetcher"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="Dossier_traitement {$(Dossier_traitement)}"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="22"
+#! TYPE="Inspector"
+#! VERSION="3"
+#! POSITION="3519 -45"
+#! ORDER="5e+014"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! >
+#! <XFORM_PARM PARM_NAME="AREA_COLOR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="THINNER_MAX_NUM_POINTS" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="TACKATTRS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="VECTOR_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="POINTCLOUD_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PEN_COLOR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="WorkspaceRunner_Failed"/>
+#! <XFORM_PARM PARM_NAME="RASTER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="THINNER_INTERVAL" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="RASTER_VISUALIZATION_OPTION" PARM_VALUE="No Reduction"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="RASTER_NUM_ROWS" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="RASTER_START_COL" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="RASTER_NUM_COLS" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="THINNER_TYPE_DISPLAY" PARM_VALUE="No Thinning"/>
+#! <XFORM_PARM PARM_NAME="RASTER_START_ROW" PARM_VALUE="&lt;Unused&gt;"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="7"
+#! SOURCE_NODE="4"
+#! TARGET_NODE="6"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="14"
+#! SOURCE_NODE="12"
+#! TARGET_NODE="9"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="16"
+#! SOURCE_NODE="6"
+#! TARGET_NODE="15"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="17"
+#! SOURCE_NODE="15"
+#! TARGET_NODE="12"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="20"
+#! SOURCE_NODE="5"
+#! TARGET_NODE="11"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="24"
+#! SOURCE_NODE="9"
+#! TARGET_NODE="5"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="25"
+#! SOURCE_NODE="5"
+#! TARGET_NODE="22"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+#! 
+GUI IGNORE SourceDataset_MDB_ADO_1,MDB_ADO_IN_PASSWORD_MDB_ADO_1,MDB_ADO_IN_WHERE_CLAUSE_MDB_ADO_1,MDB_ADO_IN_EXPOSE_ATTRS_GROUP_MDB_ADO_1,MDB_ADO_IN_NETWORK_AUTHENTICATION_MDB_ADO_1,MDB_ADO_IN_NETWORK_PROXY_MDB_ADO_1,MDB_ADO_IN_READ_CACHE_SIZE_MDB_ADO_1
+DEFAULT_MACRO fichier_source_excel H:\gimb14\c\c130606\data\templates\Fiche_encodage_complete_master.xlsm
+GUI OPTIONAL FILENAME fichier_source_excel   Fichier Template fichier excel:
+DEFAULT_MACRO Dossier_traitement C:\Users\elise\Desktop\traitement
+GUI OPTIONAL DIRNAME Dossier_traitement Dossier_enregistrement_fichier_output:
+DEFAULT_MACRO SourceDataset_MDB_ADO H:\gimb14\c\c130606\data\DGO3\Extrait_TB_1.mdb
+GUI MULTIFILE SourceDataset_MDB_ADO Access_Database_Files(*.mdb;*.accdb)|*.mdb;*.accdb|All_files(*.*)|*.* MDB:
+INCLUDE [ if {{$(SourceDataset_MDB_ADO)} == {}} { puts_real {Parameter 'SourceDataset_MDB_ADO' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE MDB_ADO
+READER_KEYWORD MDB_ADO_1
+READER_GEN_DIRECTIVES EXPOSE_ATTRS_GROUP,,TABLELIST,,WHERE_CLAUSE,,_MERGE_SCHEMAS,YES,MDB_ADO_EXPOSE_FORMAT_ATTRS,
+WRITER_TYPE NULL
+WRITER_KEYWORD NULL_DEST
+NULL_DEST_DATASET null
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "MDB_ADO_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER MDB_ADO MDB_ADO_1
+# ============================================================================
+# First get the dataset for the database. For Access, it's the database file.
+# For now we'll use whatever they had when they generated this mapping file,
+# and not reprompt
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_MDB_ADO_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER MDB_ADO MDB_ADO_1
+DEFAULT_MACRO SourceDataset_MDB_ADO_1 $(SourceDataset_MDB_ADO)
+GUI MULTIFILE SourceDataset_MDB_ADO_1 Access_Database_Files(*.mdb;*.accdb)|*.mdb;*.accdb|All_files(*.*)|*.* Source Microsoft Access Database File(s):
+# ===========================================================================
+# Optional Password
+DEFAULT_MACRO MDB_ADO_IN_PASSWORD_MDB_ADO_1 
+MDB_ADO_1_PASSWORD "$(MDB_ADO_IN_PASSWORD_MDB_ADO_1)"
+GUI OPTIONAL PASSWORD MDB_ADO_IN_PASSWORD_MDB_ADO_1 Password:
+# ===========================================================================
+# Optional global WHERE clause
+DEFAULT_MACRO MDB_ADO_IN_WHERE_CLAUSE_MDB_ADO_1 
+MDB_ADO_1_WHERE_CLAUSE "$(MDB_ADO_IN_WHERE_CLAUSE_MDB_ADO_1)"
+GUI OPTIONAL TEXT MDB_ADO_IN_WHERE_CLAUSE_MDB_ADO_1 WHERE Clause:
+DEFAULT_MACRO MDB_ADO_IN_EXPOSE_ATTRS_GROUP_MDB_ADO_1 
+MDB_ADO_1_EXPOSE_ATTRS_GROUP "$(MDB_ADO_IN_EXPOSE_ATTRS_GROUP_MDB_ADO_1)"
+GUI DISCLOSUREGROUP MDB_ADO_IN_EXPOSE_ATTRS_GROUP_MDB_ADO_1 MDB_ADO_EXPOSE_FORMAT_ATTRS Schema Attributes
+# ===========================================================================
+DEFAULT_MACRO MDB_ADO_IN_NETWORK_AUTHENTICATION_MDB_ADO_1 
+MDB_ADO_1_NETWORK_AUTHENTICATION "$(MDB_ADO_IN_NETWORK_AUTHENTICATION_MDB_ADO_1)"
+GUI OPTIONAL AUTHENTICATOR MDB_ADO_IN_NETWORK_AUTHENTICATION_MDB_ADO_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ===========================================================================
+DEFAULT_MACRO MDB_ADO_IN_NETWORK_PROXY_MDB_ADO_1 
+MDB_ADO_1_NETWORK_PROXY "$(MDB_ADO_IN_NETWORK_PROXY_MDB_ADO_1)"
+GUI OPTIONAL AUTHENTICATOR MDB_ADO_IN_NETWORK_PROXY_MDB_ADO_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Proxy"%PROMPT_TYPE%PROXY Network Proxy
+# ============================================================================
+# This keyword controls how many records to retrieve at one time into local
+# memory from the provider
+DEFAULT_MACRO MDB_ADO_IN_READ_CACHE_SIZE_MDB_ADO_1 10
+GUI OPTIONAL TEXT MDB_ADO_IN_READ_CACHE_SIZE_MDB_ADO_1 Number Of Records To Fetch At A Time:
+MDB_ADO_1_READ_CACHE_SIZE $(MDB_ADO_IN_READ_CACHE_SIZE_MDB_ADO_1)
+MDB_ADO_1_DATASET "$(SourceDataset_MDB_ADO_1)"
+#! END_SOURCE_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)DGO3_1.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+LOG_TIMINGS YES
+LOG_FILTER_MASK -1
+DEFAULT_MACRO DATASET_KEYWORD_MDB_ADO_1 MDB_ADO_1
+# -------------------------------------------------------------------------
+
+MDB_ADO_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME DGO3_1
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+
+INCLUDE [ if {[info exists env(FME_TEMP)] && [file isdirectory $env(FME_TEMP)]} {set gVisualizerTemp $env(FME_TEMP)}  elseif {[info exists env(TEMP)] && [file isdirectory $env(TEMP)]}  {set gVisualizerTemp $env(TEMP)}  elseif { $tcl_platform(platform) == "unix" } {set gVisualizerTemp "/tmp"} else {set gVisualizerTemp c:};  regsub -all {[ ,&]} {$(WORKSPACE_NAME)} {_} wsname; set gVisualizerTemp $gVisualizerTemp/${wsname}_[clock format [clock seconds] -format %H%M%S];  puts "MACRO WORKSPACE_TEMP_DIR $gVisualizerTemp"; 
+MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/inspector.ffs
+MACRO VISUALIZER_SCHEMA_FILE $(WORKSPACE_TEMP_DIR)/inspector.fsc
+MACRO VISUALIZER_CREATE_SPATIAL_INDEX YES
+# -------------------------------------------------------------------------
+MDB_ADO_1_DEF DATA   mdb_sql_statement            ""   mdb_where_clause             ""   ID_Data                      autonumber   abreg_data                   text(50)   nom_data                     text(255)   theme                        long   Description                  memo   Imagette                     text(50)   categ_avancement             text(150)   Metadata_YN                  yesno   pers_encodage_gene           text(50)   date_encodage_gene           datetime   org_auteur                   long   org_proprio                  long   pers_data                    long   pers_matière                 long   localisation                 text(255)   pers_encodage_DGRNE          text(50)   date_encodage_DGRNE          datetime   date_version_DGRNE           text(50)   sauvegarde_DGRNE             text(100)   remarque_DGRNE               memo   info_version_DGRNE           memo   proc_màj_DGRNE               memo   DGRNE_internet               text(50)   DGRNE_obtention              memo   DGRNE_dico                   yesno   DGRNE_OGEAD                  yesno   DGRNE_OGEAD_intra            yesno   DGRNE_OGEAD_REMARQUE         memo   DGRNE_path_lyr               text(255)   pers_encodage_DGATLP         text(50)   date_encodage_DGATLP         datetime   date_version_DGATLP          text(50)   sauvegarde_DGATLP            text(100)   remarque_DGATLP              memo   info_version_DGATLP          memo   proc_màj_DGATLP              memo   DGATLP_internet              text(50)   DGATLP_obtention             memo   DGATLP_description           memo   DGATLP_path_lyr              text(255)   DGATLP_copyright             integer
+
+# -------------------------------------------------------------------------
+
+Lookup ___KnownFeatureTypes___   DATA yes   "" no
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory   FACTORY_NAME "Unexpected Input Remover"   INPUT FEATURE_TYPE *   TEST @Lookup(___KnownFeatureTypes___,@FeatureType()) == yes   OUTPUT PASSED FEATURE_TYPE *
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Source -> Generic"    INPUT FEATURE_TYPE *    OUTPUT FEATURE_TYPE *       @Transform(MDB_ADO,FME_GENERIC,PRESERVE_GEOMETRY)
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+
+INCLUDE [    set macroLine "MACRO AttributeKeeper_bc0f12b9_30c4_4f07_9ad5_19cac94599db2_LIST_EXP ";    foreach attr [split ""] {       set attr [FME_DecodeText $attr];       set attr [regsub "{}$" $attr "{}.*"];       set attr [regsub -all "{}" $attr "{\[0-9\]+}"];       append macroLine ",^$attr$";    };    puts $macroLine; ]
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeKeeper    INPUT  FEATURE_TYPE DATA    OUTPUT FEATURE_TYPE AttributeKeeper_OUTPUT        @KeepAttributes(abreg_data,nom_data,theme,Description,pers_matière,fme_regexp_match,"^fme_$(AttributeKeeper_bc0f12b9_30c4_4f07_9ad5_19cac94599db2_LIST_EXP)")
+
+# -------------------------------------------------------------------------
+
+Tcl2 proc ParameterFetcher_doFetch {} {    foreach {name val} {"Dossier_traitement {$(Dossier_traitement$encode)}"} {         if { [string match {*<at>*} $val] == 1 } {             set val [FME_Execute EvaluateExpression {STRING} $val {ParameterFetcher}];         } elseif {[string match {*FME_CONDITIONAL*} $val] == 1} {             set val [FME_Execute EvaluateExpression {STRING} $val {ParameterFetcher}];         } else {             set val [FME_DecodeTextOrAttr $val];         };       FME_SetAttribute [FME_DecodeText $name] $val    } }
+FACTORY_DEF * TeeFactory    FACTORY_NAME ParameterFetcher    INPUT  FEATURE_TYPE AttributeKeeper_OUTPUT    OUTPUT FEATURE_TYPE ParameterFetcher_OUTPUT         @Tcl2(ParameterFetcher_doFetch)
+
+# -------------------------------------------------------------------------
+FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator_2 INPUT  FEATURE_TYPE ParameterFetcher_OUTPUT ATTR Nom_fichier <at>Value<openparen>abreg_data<closeparen>.xlsm ATTR Nom_fichier_data <at>Value<openparen>abreg_data<closeparen>_data ATTR nom_fichier_data_xlsx $(Dossier_traitement$encode)<backslash><at>Value<openparen>abreg_data<closeparen>_data.xlsx    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_2_OUTPUT 
+# -------------------------------------------------------------------------
+FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator_3 ATTRSET_PROPAGATE_MISSING YES INPUT  FEATURE_TYPE AttributeCreator_2_OUTPUT ATTR fichier_vbs Dim<space>objExcel<lf><space><space><space><space>Dim<space>objWB1<lf><space><space><space><space>Dim<space>objWB2<lf><space><space><space><space>Dim<space>ws<space><lf><space><space><space><space>Set<space>objExcel<space>=<space>CreateObject<openparen><quote>Excel.Application<quote><closeparen><lf><space><space><space><space>objExcel.DisplayAlerts<space>=<space>False<lf><space><space><space><space>Set<space>objWB1<space>=<space>objExcel.Workbooks.Open<openparen><quote><at>Value<openparen>Dossier_traitement<closeparen><backslash><at>Value<openparen>Nom_fichier_data<closeparen>.xlsx<quote><closeparen><lf><tab>Set<space>objWB2<space>=<space>objExcel.Workbooks.Open<openparen><quote><at>Value<openparen>Dossier_traitement<closeparen><backslash><at>Value<openparen>Nom_fichier<closeparen><quote><closeparen><lf><tab><lf><space><space><space><space>For<space>Each<space>ws<space>In<space>objWB1.Sheets<lf><space><space><space><space><space><space><space><space>ws.Copy<space>objWB2.Sheets<openparen>objWB2.Sheets.Count<closeparen><lf><space><space><space><space>Next<lf><space><space><space><space>objWB1.Close<space>False<lf><space><space><space><space>objWB2.Save<lf><space><space><space><space>objWB2.Close<lf><space><space><space><space>With<space>objExcel<lf><space><space><space><space><space><space><space><lf><space><space><space><space><space><space><space><space>.DisplayAlerts<space>=<space>True<lf><space><space><space><space><space><space><space><space>.Quit<lf><space><space><space><space>End<space>With<lf><space><lf><apos><space>Open<space>the<space>workbook<lf><tab>Set<space>objWorkbook<space>=<space>objExcel.Workbooks.Open<space><openparen><quote><at>Value<openparen>Dossier_traitement<closeparen><backslash><at>Value<openparen>Nom_fichier<closeparen><quote><closeparen><lf><lf><tab>objExcel.Visible<space>=<space>False<lf><space><space><space><lf><space><space><space>Set<space>c=objWorkbook.Worksheets<openparen><quote>data_move<quote><closeparen><lf><lf><tab>c.Range<openparen><quote>E2<quote><closeparen>.Copy<lf><tab>objWorkbook.Worksheets<openparen><quote>Contacts<quote><closeparen>.Range<openparen><quote>H6<quote><closeparen>.PasteSpecial<space>-4163<lf><space><space><space><space><lf><space><space><space><space><lf><space><space><space><space>c.Range<openparen><quote>G2<quote><closeparen>.Copy<lf><tab>objWorkbook.Worksheets<openparen><quote>Contacts<quote><closeparen>.Range<openparen><quote>H5<quote><closeparen>.PasteSpecial<space>-4163<lf><space><space><space><space><lf><space><space><space><space><space><lf><space><space><space><space>c.Range<openparen><quote>F2<quote><closeparen>.Copy<lf><tab>objWorkbook.Worksheets<openparen><quote>Contacts<quote><closeparen>.Range<openparen><quote>H8<quote><closeparen>.PasteSpecial<space>-4163<lf><space><space><space><space><lf><space><space><space><space>c.Range<openparen><quote>D2<quote><closeparen>.Copy<lf><tab>objWorkbook.Worksheets<openparen><quote>Description<quote><closeparen>.Range<openparen><quote>G5<quote><closeparen>.PasteSpecial<space>-4163<lf><space><space><space><space><lf><space><space><space><space>c.Range<openparen><quote>C2<quote><closeparen>.Copy<lf><tab>objWorkbook.Worksheets<openparen><quote>Description<quote><closeparen>.Range<openparen><quote>G15<quote><closeparen>.PasteSpecial<space>-4163<lf><space><space><space><space><lf><space><space><space><space><space>c.Range<openparen><quote>A2<quote><closeparen>.Copy<lf><tab>objWorkbook.Worksheets<openparen><quote>Identification<quote><closeparen>.Range<openparen><quote>F3<quote><closeparen>.PasteSpecial<space>-4163<lf><space><space><space><space><lf><space><space><space><space>c.Range<openparen><quote>B2<quote><closeparen>.Copy<lf><tab>objWorkbook.Worksheets<openparen><quote>Identification<quote><closeparen>.Range<openparen><quote>F5<quote><closeparen>.PasteSpecial<space>-4163<lf><space><space><space><space><lf><tab>objWorkbook.Save<lf><lf><tab>objWorkbook.sheets<openparen><quote>data_move<quote><closeparen>.Delete<lf><space><space><space><space>objWorkbook.sheets<openparen><quote>Accueil-Instructions<quote><closeparen>.Select<lf><space><space><space><lf>objWorkbook.Save<lf>objExcel.Quit<lf>    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_3_OUTPUT 
+# -------------------------------------------------------------------------
+
+# Convert the workspace name to one containing only / -- Tcl likes this better
+# (and so do I)
+
+# And determine the "NULL" device so we can ensure we don't get stray output
+# messing up our stdout if we are running workspaces in the background
+# See http://wiki.tcl.tk/1649 for a description of the tcl_platform
+# variable, the "platform" part seems to have valid values windows, unix, and
+# macintosh (the latter of which is actually pre-OS X)
+
+Tcl2 if { $tcl_platform(platform) == {windows} } {         set null_device {NUL:};      } else {         set null_device {/dev/null};      };
+Tcl2 proc WorkspaceRunner_3f040101_235a_430a_8350_07e4e3498b7f2_runner { parmListString workspaceFile } {    set workspaceFileUnix [regsub -all {\\} $workspaceFile {/}];    set parmListString [string trim $parmListString {()}];    set comment {        Build up the command line in a list, which we'll "eval" to get        at its pieces when we actually execute the "exec".    };    lappend commandArguments {$(FME_HOME_UNIX)/fme}                             $workspaceFileUnix;    set parmList [split $parmListString {,}];    foreach {parmName encodedValue} $parmList {       set comment {           Decode both the parameter name (which we'd never expect to need it but could)           as well as the parameter value (which is very likely encoded to guard it from the parser)           and append them each to a new list which will be passed           as the arguments to the exec function.  Note that the           parameter names need to be turned into macro settings by           prepending them with --           Note also that the WorkspaceRunner sometimes encodes attribute           dereferences by placing <amp> at the beginning rather than using @Value.           Further note that string range forgives if the ending index is > the length of           the string, so we can just ask for the first 5 characters           when we're checking for <amp>.       };       lappend commandArguments \"--$parmName\";       set comment {           for backwards compatibility, replace first <amp>       };       if { [string range $encodedValue 0 4] == {<amp>} &&            [string length $encodedValue] > 5 } {           set encodedValue [string replace $encodedValue 0 4 {<at>Value<openparen>}]];           append encodedValue "<closeparen>";       };       set comment {  for backwards compatibility, call decode text or attr.  };       set encodedValue [FME_DecodeTextOrAttr $encodedValue];       lappend commandArguments $encodedValue;    };    set comment {        Now optionally run this in a detached way if we were not supposed        to wait by adding & on the end to put it in the background.  And        at the same time, ensure that any stray stdout/stderr is routed to        null.    };    if { {Yes} == {No} } {        global null_device;        lappend commandArguments \">$null_device\";        FME_LogMessage fme_inform \"WorkspaceRunner: Initiating run of FME Workspace $workspaceFile with command line:\";    } else {        FME_LogMessage fme_inform \"WorkspaceRunner: Running FME Workspace $workspaceFile with command line:\";    };    set comment {        The below 2>@1 forces any standard error output to go into the msg variable        or to NULL if we're running in the background.    };    lappend commandArguments {2>@1};    if { {Yes} == {No} } {        lappend commandArguments {&};    };    FME_LogMessage fme_inform [concat WorkspaceRunner: $commandArguments];    if { {Yes} == {No} } {       after 1000;       while { [FME_CanSpawnFme <Unused>] == {0} } {             after 2000;       };    };    if {[catch {eval [concat exec $commandArguments] } msg ]} {       set msg [regsub {\015*\012child[^\012]*$} $msg {}];       FME_LogMessage fme_warn \"WorkspaceRunner: Failed to run workspace $workspaceFileUnix -- Trace was:\n\n$msg\n\";       FME_SetAttribute _failure_message $msg;       return FAILURE;    } else {       global WorkspaceRunner_3f040101_235a_430a_8350_07e4e3498b7f2_process_count;       incr WorkspaceRunner_3f040101_235a_430a_8350_07e4e3498b7f2_process_count;       if { {Yes} == {No} } {           FME_LogMessage fme_inform \"WorkspaceRunner: Successfully initiated run of workspace $workspaceFile\";           global WorkspaceRunner_3f040101_235a_430a_8350_07e4e3498b7f2_all_processes;           lappend WorkspaceRunner_3f040101_235a_430a_8350_07e4e3498b7f2_all_processes $msg;       } else {           FME_LogMessage fme_inform \"WorkspaceRunner: Successfully ran workspace $workspaceFile\";       };       return SUCCESS;    }; }
+FACTORY_DEF * TestFactory    FACTORY_NAME WorkspaceRunner_ExecutorAndRouter    INPUT  FEATURE_TYPE AttributeCreator_3_OUTPUT    TEST @Tcl2("WorkspaceRunner_3f040101_235a_430a_8350_07e4e3498b7f2_runner {(Dossier_traitement,@EvaluateExpression(STRING_ENCODED,$(Dossier_traitement$encode),WorkspaceRunner),Fichier_source,@EvaluateExpression(STRING_ENCODED,$(fichier_source_excel$encode),WorkspaceRunner),SourceDataset_MDB_ADO,@EvaluateExpression(STRING_ENCODED,$(SourceDataset_MDB_ADO$encode),WorkspaceRunner),abreg_data,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>abreg_data<closeparen>,WorkspaceRunner),Description,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>Description<closeparen>,WorkspaceRunner),nom_data,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>nom_data<closeparen>,WorkspaceRunner),pers_matière,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>pers_mati<u00e8>re<closeparen>,WorkspaceRunner),theme,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>theme<closeparen>,WorkspaceRunner))} {DGO3_2.fmw}") == SUCCESS    OUTPUT PASSED FEATURE_TYPE WorkspaceRunner_SUCCEEDED    OUTPUT FAILED FEATURE_TYPE WorkspaceRunner_FAILED
+Tcl2 proc WorkspaceRunner_3f040101_235a_430a_8350_07e4e3498b7f2_summarizer { } {     global WorkspaceRunner_3f040101_235a_430a_8350_07e4e3498b7f2_process_count;     set comment { incr 0 creates the variable if it wasn't present };     incr WorkspaceRunner_3f040101_235a_430a_8350_07e4e3498b7f2_process_count 0;     FME_SetAttribute _proc_count [set WorkspaceRunner_3f040101_235a_430a_8350_07e4e3498b7f2_process_count];     global WorkspaceRunner_3f040101_235a_430a_8350_07e4e3498b7f2_all_processes;     if {[info exists WorkspaceRunner_3f040101_235a_430a_8350_07e4e3498b7f2_all_processes]} {         set index 0;         foreach pid [set WorkspaceRunner_3f040101_235a_430a_8350_07e4e3498b7f2_all_processes] {             FME_SetAttribute \"_processes{$index}\" $pid;             incr index;         }     } }
+FACTORY_DEF * CreationFactory    FACTORY_NAME WorkspaceRunner_SummaryMaker    CREATE_AT_END yes
+
+# -------------------------------------------------------------------------
+
+# Set the directive to add all the meta-attributes to the features.
+# We do this so users see all possible information in the viewed
+# features.
+
+READER_META_ATTRIBUTES fme_feature_type fme_dataset fme_basename
+# Assumption is that the workspace temp dir has been already set and created.  See controldefs.cpp - ControlDefs::writeVisualizerTempDir
+DEFAULT_MACRO WORKSPACE_TEMP_DIR
+INCLUDE [         if { [string length {}] > 0 } {             set catter "" ;             set comma "" ;             foreach attr {} {                 set catter "$catter$comma@Value(\"$attr\")" ;                 set comma ",_," ;             } ;             puts "MACRO CATMAC _@Concatenate($catter)" ;         }         else {             puts "MACRO CATMAC " ;         };         set safeName "[regsub -all {[^a-zA-Z0-9]} {WorkspaceRunner_Failed} _]_[expr round(rand() * 1000000)]_[clock clicks  -milliseconds]";         puts "MACRO SAFE_FFS_NAME $safeName";         ]
+# Make the temporary directory that the FFS files will live in.
+FACTORY_DEF * CreationFactory      FACTORY_NAME WorkspaceRunner_Failed_DirCreator      OUTPUT FEATURE_TYPE __nukeme__          @Tcl2("catch {file mkdir {$(WORKSPACE_TEMP_DIR)}}")
+FACTORY_DEF * TeeFactory    FACTORY_NAME WorkspaceRunner_Failed_DirCreatorCleanerUpper    INPUT FEATURE_TYPE __nukeme__
+# Send raster, point cloud and vector features down different paths to prepare
+# them for viewing
+
+FACTORY_DEF * TestFactory    FACTORY_NAME WorkspaceRunner_Failed_FeatureDirector    INPUT  FEATURE_TYPE WorkspaceRunner_FAILED    TEST &fme_type == "fme_raster"    OUTPUT FAILED FEATURE_TYPE WorkspaceRunner_Failed___NotRasterFeatures___    OUTPUT PASSED FEATURE_TYPE WorkspaceRunner_Failed___RasterFeatures___
+FACTORY_DEF * TestFactory    FACTORY_NAME WorkspaceRunner_Failed___FeatureDirector1    INPUT FEATURE_TYPE WorkspaceRunner_Failed___NotRasterFeatures___    TEST &fme_type == "fme_point_cloud"    OUTPUT FAILED FEATURE_TYPE WorkspaceRunner_Failed___VectorFeatures___    OUTPUT PASSED FEATURE_TYPE WorkspaceRunner_Failed___PointCloudFeatures___
+# Vector features simply may get their colors overridden
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME WorkspaceRunner_Failed_VectorSetterUpper    INPUT FEATURE_TYPE WorkspaceRunner_Failed___VectorFeatures___    OUTPUT FEATURE_TYPE __viewme__
+# Point Cloud Features Might Need to be thinned
+
+# Note that we don't call the ThinPointCloud function directly, but rather
+# do it through TCL. This should allow this transformer to be used with a
+# Desktop license, even though ThinPointCloud requires Professional.
+
+Tcl2 proc WorkspaceRunner_Failed_92dca853_25c5_49c7_a7c7_6ede8fbaef982_thinPointCloud {} {    if {[string equal {NO_THINNING} {KEEPNPOINT}]}    {       FME_Execute ThinPointCloud NO_THINNING <Unused>;    }    elseif {[string equal {NO_THINNING} {MAXNUMPOINTS}]}    {       FME_Execute ThinPointCloud NO_THINNING <Unused>;    }    elseif {[string equal {NO_THINNING} {FIRSTNPOINTS}]}    {       FME_Execute ThinPointCloud NO_THINNING <Unused>;    }    elseif {[string equal {NO_THINNING} {LASTNPOINTS}]}    {       FME_Execute ThinPointCloud NO_THINNING <Unused>;    }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME WorkspaceRunner_Failed___PointCloudThinner    INPUT FEATURE_TYPE WorkspaceRunner_Failed___PointCloudFeatures___    OUTPUT FEATURE_TYPE __viewme__       @Tcl2("WorkspaceRunner_Failed_92dca853_25c5_49c7_a7c7_6ede8fbaef982_thinPointCloud")
+Tcl2 proc WorkspaceRunner_Failed_92dca853_25c5_49c7_a7c7_6ede8fbaef982_prepareRaster {subsetStartRow subsetNumRows subsetStartCol subsetNumCols} {    set useDI [string equal -nocase {$(FME_VIEWER_APP)} {fmedatainspector}];    if {!$useDI} {       FME_Execute ApplyRasterRotation BILINEAR;    };    set doResample [string equal {NoReduction} {Resample}];    set doSubset [string equal {NoReduction} {Subset}];    set doBounds [string equal {NoReduction} {BoundingBoxOnly}];    if {$doBounds}  {       FME_Execute GeometryType fme_polygon;    }    elseif {$doResample || $doSubset} {       set comment {          First, we need to prefix all the attributes. This is done because          we are going to call @RasterProperties, and we want to make sure          it doesn't overwrite any existing attributes.       };       set kAttrPrefix ".";       set allNames [FME_AttributeNames];       foreach oldName $allNames {          set newName $kAttrPrefix;          append newName $oldName;          FME_RenameAttribute $newName $oldName;       };       FME_Execute RasterProperties RASTER;       if {$doResample} {          set oldNumCols [FME_GetAttribute _num_columns];          set oldNumRows [FME_GetAttribute _num_rows];          set oldSpacingX [FME_GetAttribute _spacing_x];          set oldSpacingY [FME_GetAttribute _spacing_y];          set kMinNumCells 32;          set kMaxNumCells 512;          set comment {             We will only resample if both dimensions are greater than the             minimum num cells, and at least one is greater than the maximum.          };          if {$oldNumRows > $kMinNumCells && $oldNumCols > $kMinNumCells && ($oldNumRows > $kMaxNumCells || $oldNumCols > $kMaxNumCells)} {             set newSpacingX 1.0;             set newSpacingY 1.0;             if {$oldNumRows > $oldNumCols} {                set comment {                   If we have more rows than columns, we need to choose a spacing                   that reduces the number of rows to the maximum we've chosen.                };                set newSpacingY [expr 1.0 * $oldNumRows * $oldSpacingY / $kMaxNumCells];                set newSpacingX [expr 1.0 * $newSpacingY / $oldSpacingY * $oldSpacingX];                set comment {                   Now we need to check if doing this will result in the columns                   going below the minimum. If so, choose the spacing such that                   we only go down to the minimum (and not past).                };                set newNumCols [expr $oldNumCols * $oldSpacingX / $newSpacingX];                if {$newNumCols < $kMinNumCells}                {                   set newSpacingX [expr 1.0 * $oldNumCols * $oldSpacingX / $kMinNumCells];                   set newSpacingY [expr 1.0 * $newSpacingX / $oldSpacingX * $oldSpacingY];                };             }             else {                set comment {                   This is identical to the above case, except the roles of                   rows and cols are reversed.                };                set newSpacingX [expr 1.0 * $oldNumCols * $oldSpacingX / $kMaxNumCells];                set newSpacingY [expr 1.0 * $newSpacingX / $oldSpacingX * $oldSpacingY];                set newNumRows [expr $oldNumRows * $oldSpacingY / $newSpacingY];                if {$newNumRows < $kMinNumCells}                {                   set newSpacingY [expr 1.0 * $oldNumRows * $oldSpacingY / $kMinNumCells];                   set newSpacingX [expr 1.0 * $newSpacingY / $oldSpacingY * $oldSpacingX];                };             };             FME_Execute ResampleRaster CELL_SIZE $newSpacingX $newSpacingY NearestNeighbor;          };       }       elseif {$doSubset} {          set comment {             Get the value of some strings that may be attributes or constants.             Note that we pass in the attribute prefix we're using, because if             one does turn out to be an attribute, it won't actually be the exact             name in the string (since we renamed all our attributes above).          };          set rasterNumRows [FME_GetAttribute _num_rows];          set rasterNumCols [FME_GetAttribute _num_columns];          set comment {             Only do subsetting if the specified start position is actually             within the raster.          };          if {$subsetStartRow < $rasterNumRows && $subsetStartCol < $rasterNumCols}          {             set comment {                Now bound the subset to the size of the raster, so that                we don't create padding.             };             if {[expr $subsetStartRow + $subsetNumRows] > $rasterNumRows}             {                set subsetNumRows [expr $rasterNumRows - $subsetStartRow];             };             if {[expr $subsetStartCol + $subsetNumCols] > $rasterNumCols}             {                set subsetNumCols [expr $rasterNumCols - $subsetStartCol];             };             FME_Execute SubsetRaster $subsetStartRow $subsetNumRows $subsetStartCol $subsetNumCols;          };       };       set comment {          Remove all the attributes added by @RasterProperties and remove the          prefix from the real attributes. We assume they all start with an          underscore.       };       FME_Execute RemoveAttributes fme_regexp_match {^_};       foreach oldName $allNames {          set newName $kAttrPrefix;          append newName $oldName;          FME_RenameAttribute $oldName $newName;       };    }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME WorkspaceRunner_Failed_RasterSetterUpper    INPUT FEATURE_TYPE WorkspaceRunner_Failed___RasterFeatures___    OUTPUT FEATURE_TYPE __viewme__       @Tcl2("WorkspaceRunner_Failed_92dca853_25c5_49c7_a7c7_6ede8fbaef982_prepareRaster {<Unused>} {<Unused>} {<Unused>} {<Unused>}")
+# Now route all the features into the recorder, changing their
+# feature type to the transformer name so that they view nicely
+# WorkspaceRunner_Failed_92dca853_25c5_49c7_a7c7_6ede8fbaef982_VIS_FEAT_TYPE changes the feature types
+# of the features being visualized.
+
+DEFAULT_MACRO WorkspaceRunner_Failed_92dca853_25c5_49c7_a7c7_6ede8fbaef982_VIS_FEAT_TYPE WorkspaceRunner_Failed$(CATMAC)
+DEFAULT_MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/$(SAFE_FFS_NAME).ffs
+DEFAULT_MACRO VISUALIZER_CREATE_SPATIAL_INDEX NO
+# [PR#45549] The Data Inspector will limit the maximum number of features
+# it reads on WIN32, so we will correspondingly limit the number of
+# features we record here using the MAX_FEATURES_TO_RECORD directive.
+
+FACTORY_DEF * RecorderFactory    FACTORY_NAME WorkspaceRunner_Failed_Recorder    INPUT FEATURE_TYPE __viewme__  _wb_termination_feature Yes @FeatureType(TERMINATOR_@Value(_wb_termination_xformer))    INPUT FEATURE_TYPE __viewme__  @FeatureType($(WorkspaceRunner_Failed_92dca853_25c5_49c7_a7c7_6ede8fbaef982_VIS_FEAT_TYPE))    FEATURE_FILE "$(VISUALIZER_FEATURE_FILE)"    CREATE_SPATIAL_INDEX "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    INSPECTOR "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    FSC_SCHEMA abreg_data,varchar<openparen>255<closeparen>,nom_data,varchar<openparen>255<closeparen>,theme,varchar<openparen>255<closeparen>,Description,varchar<openparen>255<closeparen>,pers_mati<u00e8>re,varchar<openparen>255<closeparen>,Dossier_traitement,varchar<openparen>255<closeparen>,Nom_fichier,varchar<openparen>255<closeparen>,Nom_fichier_data,varchar<openparen>255<closeparen>,nom_fichier_data_xlsx,varchar<openparen>255<closeparen>,fichier_vbs,varchar<openparen>255<closeparen>,_failure_message,varchar<openparen>255<closeparen>    MODE RECORD    RECORD_DIRECTLY_TO_DISK YES    MAX_FEATURES_TO_RECORD WIN32 2000000
+
+# -------------------------------------------------------------------------
+
+
+FME_PYTHON_PATH "$(FME_MF_DIR)"
+
+FACTORY_DEF * PythonFactory    FACTORY_NAME PythonCaller    INPUT  FEATURE_TYPE WorkspaceRunner_SUCCEEDED    SYMBOL_NAME traitement    PYTHON_NAMESPACE FMEOBJECTS    SOURCE_CODE import<space>fmeobjects<lf>import<space>os<lf><lf><lf>#<space>Template<space>Function<space>interface:<lf>def<space>traitement<openparen>feature<closeparen>:<lf><space><space><space>fichier_vbs=feature.getAttribute<openparen><quote>fichier_vbs<quote><closeparen><lf><space><space><space>Nom=feature.getAttribute<openparen><quote>nom_fichier_data_xlsx<quote><closeparen><lf><space><space><space>Dossier_traitement=FME_MacroValues<openbracket><apos>Dossier_traitement<apos><closebracket><lf><space><space><space>file<space>=<space>open<openparen><quote>fichier.vbs<quote><comma><space><quote>w<quote><closeparen><lf><space><space><space>file.write<openparen>fichier_vbs<closeparen><lf><space><space><space>file.close<openparen><closeparen><lf><space><space><space>os.system<openparen><quote>fichier.vbs<quote><closeparen><lf><space><space><space>os.remove<openparen><quote>fichier.vbs<quote><closeparen><lf><space><space><space>os.remove<openparen>Nom<closeparen><lf><lf><lf>    OUTPUT PYOUTPUT FEATURE_TYPE PythonCaller_OUTPUT
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "PythonCaller OUTPUT Output Nuker"   INPUT FEATURE_TYPE PythonCaller_OUTPUT
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory   FACTORY_NAME "Final Output Feature Type Router"   INPUT FEATURE_TYPE *   TEST @Value(__wb_out_feat_type__) != ""   OUTPUT PASSED FEATURE_TYPE *     @FeatureType(@Value(__wb_out_feat_type__))   OUTPUT FAILED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * CreationFactory   CREATE_AT_END   OUTPUT FEATURE_TYPE __NUKEME__   @TCL("if [file exists {$(WORKSPACE_TEMP_DIR)}] {set files [glob -nocomplain -directory  {$(WORKSPACE_TEMP_DIR)} -tails *.ffs];   if {[llength $files] == 1} {    set theFile {$(WORKSPACE_TEMP_DIR)/};   append theFile [lindex $files 0];   eval FME_Execute System \173\042$(FME_HOME_UNIX)/fmedatainspector\042 --visualizer --single-application --delete-on-close --no-source-prompt -f FFS $theFile & \175;  } elseif { [llength $files] == 0 } {  catch { file delete -force {$(WORKSPACE_TEMP_DIR)} };  } else {  set filesNoExt {}; set lastfile {}; foreach {fileName} [lsort $files] { set fileNoExt [string trimright $fileName {.ffs}]; if [regexp {(.*)_[0-9]*$} $fileNoExt wholething fileNoExtBase] {  if { $fileNoExtBase == $lastfile } { continue } }; set lastfile $fileNoExt; lappend filesNoExt $fileNoExt };  eval FME_Execute System \173\042$(FME_HOME_UNIX)/fmedatainspector\042 --visualizer --single-application --delete-on-close --no-source-prompt -d {$(WORKSPACE_TEMP_DIR)} -a ffs -f FFS $filesNoExt & \175; }; }; ")
+FACTORY_DEF * TeeFactory   INPUT FEATURE_TYPE __NUKEME__
